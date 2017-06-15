@@ -1,0 +1,77 @@
+<html>
+<meta charset="utf-8">
+<title>VoIP Learning</title>
+    <!-- CSS -->
+	<link href="../ncnu-research/css/reset.css" rel="stylesheet" type="text/css" />
+	<link href="../ncnu-research/css/style.css" rel="stylesheet" type="text/css" />
+	<!-- 縮排 -->
+	<style>.subp{margin-left:30px;}	</style>
+
+</head>
+
+	<div class="header-wrap">
+ 		<div id="header"><span class="toggle">Menu</span><a class="logo" href="http://ms14.voip.edu.tw/~jonathanfan/NCNU/ncnu-research/index.html"></a>
+
+ 	<div class="nav">
+    <ul>
+		<li><a href="http://ms14.voip.edu.tw/~jonathanfan/NCNU/ncnu-research/">HOME</a></li>
+	</ul>
+	<!--</div>-->
+</div>
+</div>
+</div>
+<body>
+	<td class="subp">
+	<pre>
+	<font size="5" color="Black">VoIP Learning</font>
+	<a name='目錄'><font size="5">目錄</font></a>
+	<a href='#ch1'><font size="4">第一章、Introduction</font></a>
+	<a href='#ch1'><font size="4">第二章、IP </font></a>
+
+	<font color="blue"><a name="ch1">第一章、Introduction</a></font>
+		<font color="red">Carrier grade means when you dial a number, you get through to the number you dialed.</font>
+		1.Carrier grade means extremely high reliability.
+		2.Carrier grade refers to the capability to support hundreds of thousands of subscribers.
+		3.VoIP is simply the transport of voice traffic by using the Internet Protocol.
+		4.One of the greatest challenges of VoIP is voice quality, and one of the keys to acceptable voice quality is bandwidth.
+		If we are ensure that sufficient bandwidth is available to enable high-quality voice,then we need to control and prioritize
+		 over the Internet.
+		5.IP is a packet-based protocol which means that traffic is broken into small packets that are sent individually to 
+		their destination.
+		6.Transmission Control Protocol (TCP) includes functions for retransmission of packets that might have been lost or delayed 
+		and for the assembly of packets in the correct order at he destination.
+		7.Nyquist Theorem -- 一通電話最低的頻寬為64kbps。Fast Ethernet 頻寬為100Mbps，Ethernet 頻寬為10Mbps。
+		8.Why transport voice? Because voice can transport many thins that printing can't transport.
+		9.Why use IP to transport? Because 
+		10.Nyquist Theorem -- 奈奎斯特取樣定理說明了受量測訊號的取樣率與頻率之間的關係。根據此定理，取樣率 fs 必須比受量測訊號中相關最高頻率分量高出兩倍。
+		11.G.711 -- 
+		12.MOS -- Mean Opinion Score聲音電話的品質。
+		13.Packet Loss -- 
+		14.Delay -- 網路塞車、頻寬有關係。buffer會照成delay。
+		15.Jitter -- delay時間的變動。
+		16.PBX --PBX是用戶電話交換機的縮寫，是一個在企業內部使用的私有電話網絡。PBX電話系統的用戶們須共用一定數量的外線，才能向外界撥打電話。PBX可以連接企業
+		內部電話，也可以將這些電話與公共交換電話網（PSTN）連接在一起。
+		PBX電話系統的一個最新趨勢是使用VOIP PBX，也叫IP PBX，即使用因特網協定傳送語音電話。
+		17.Call Center --客服中心。
+		18.Automatic Call Distribution (ACD) --
+		19.Customer Relationship Management (CRM) --可以將call center外移至國外，這樣可以減少人事成本。
+
+	<font color="blue"><a name="ch1">第二章、IP</a></font>
+		1.UDP：
+			a.沒有retransmission的機制
+			b.UDP的overhead比TCP小，因為沒有ACK的機制
+			c.connectionless-oriented
+			d.沒有Congestion Control
+			e.Header的大小為8個bytes
+			f.Header Length: 20bytes(5)，Header的大小一定都是4的倍數。RTP也有4的倍數。
+		2.Network Traffic
+			a.Real Time
+			b.Video Streaming
+			c.Web
+			d.Batch processes
+
+
+</pre>
+</td>
+</body>
+</html>

@@ -1,0 +1,31 @@
+	Add below "send an initial buffer" and comment it
+	
+	
+	// Open wav file with mode "rb" and send an initial buffer
+	FILE *wav_file;
+	wav_file = fopen("D:\\bird.wav", "rb");
+	fseek(wav_file, 0, SEEK_END);
+	unsigned long filesize = ftell(wav_file);
+	char *buffer = (char*)malloc(sizeof(char)*filesize);
+	rewind(wav_file);
+	// store read data into buffer
+	fread(buffer, sizeof(char), filesize, wav_file);
+
+	// send buffer to client
+	int sent = 0;
+	while (sent < filesize)
+	{
+		iResult = send(ConnectSocket, buffer + sent, filesize - sent, 0);
+		if (iResult == -1)
+			break;  // ERROR
+
+		sent += iResult;
+	}
+
+	if (iResult == SOCKET_ERROR) {
+		printf("send failed with error: %d\n", WSAGetLastError());
+		closesocket(ConnectSocket);
+		WSACleanup();
+		return 1;
+	}
+	printf("Bytes Sent: %ld\n", iResult);

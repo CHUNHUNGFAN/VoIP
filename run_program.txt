@@ -1,0 +1,3 @@
+1.Run the program
+
+#python tcptraceroute.py www.google.com.tw 80
